@@ -22,18 +22,20 @@ void loop() {
   int limiarY = 450;
 
   if (valorY < 512 - limiarY) {
-    strcpy(mensagem, estadoBotao == LOW ? "p.Cima" : "Cima");
+    strcpy(mensagem, estadoBotao == LOW ? "p.Cima" : "l.Cima");
   } else if (valorY > 512 + limiarY) {
-    strcpy(mensagem, estadoBotao == LOW ? "p.Baixo" : "Baixo");
+    strcpy(mensagem, estadoBotao == LOW ? "p.Baixo" : "l.Baixo");
   } else if (valorX > 512 + limiarX) {
-    strcpy(mensagem, estadoBotao == LOW ? "p.Direita" : "Direita");
+    strcpy(mensagem, estadoBotao == LOW ? "p.Direita" : "l.Direita");
   } else if (valorX < 512 - limiarX) {
-    strcpy(mensagem, estadoBotao == LOW ? "p.Esquerda" : "Esquerda");
+    strcpy(mensagem, estadoBotao == LOW ? "p.Esquerda" : "l.Esquerda");
   } else {
     strcpy(mensagem, "Parado");}
 
+  if ()
+
   lcd.clear();
-  lcd.setCursor(0, 0);
+  lcd.setCursor(1, 0);
   lcd.print(mensagem);
 
   delay(500);}
