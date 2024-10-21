@@ -42,7 +42,7 @@ void loop() {
 
    if(estadoSensor){
 
-     Serial.println("PRETO (ou nada)");
+     Serial.println("Obstaculo");
 
      
      display.setFont(&FreeMonoOblique9pt7b); //Comando para definir a fonte que será utilizada;
@@ -50,20 +50,20 @@ void loop() {
      display.setTextSize(1); //Comando para definir tamanho od
      display.setCursor(2, 20); //Definição de onde o texto será escrito. Lembre se que: linha, coluna;
 
-     display.print("PRETO"); //Texto a ser escrito;
+     display.print("OBSTACULO"); //Texto a ser escrito;
      delay(1000);
 
 
    }else{
 
-      Serial.println("BRANCO (diferente de PRETO)");
+      Serial.println("Sem Obstaculo");
      
      display.setFont(&FreeMonoOblique9pt7b); //Comando para definir a fonte que será utilizada;
      display.setTextColor(WHITE); //Comando para definir a cor do texto;
      display.setTextSize(1); //Comando para definir tamanho od
      display.setCursor(2, 20); //Definição de onde o texto será escrito. Lembre se que: linha, coluna;
 
-     display.print("BRANCO"); //Texto a ser escrito;
+     display.print("SEM OBSTACULO"); //Texto a ser escrito;
      delay(1000);
 
 
